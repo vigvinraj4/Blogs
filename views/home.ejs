@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+
+
+<h1>Home</h1>
+
+<div>
+  <p> <%= data %> </p>
+
+
+  <% postData.forEach(function(element) { %>
+  <div>
+    <h1>
+      <%= element.postTitle %>
+    </h1>
+
+  <div>
+    <p>
+      <%= element.postBody.substring(0,100)+" ... "%>
+      <a href="/posts/<%= element.postTitle%>">Read More</a>
+    </p>
+
+    </div>
+  </div>
+
+
+  <% console.log(element.postTitle); %>
+
+  <% }) %>
+
+
+</div>
+<% include ./partials/footer %>
